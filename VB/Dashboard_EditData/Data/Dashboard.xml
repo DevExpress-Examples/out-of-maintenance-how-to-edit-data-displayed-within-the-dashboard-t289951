@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Visible="false" Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="nwind" ProviderKey="Access97">
+        <Parameters>
+          <Parameter Name="database" Value="|DataDirectory|\\Data\\nwind.mdb" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="" />
+          <Parameter Name="password" Value="" />
+        </Parameters>
+      </Connection>
+      <Query Type="TableQuery" Name="Orders">
+        <Filter>[Orders.CustomerID] = 'AROUT'</Filter>
+        <Table Name="Orders">
+          <Column Name="OrderID" />
+          <Column Name="OrderDate" />
+          <Column Name="Freight" />
+          <Column Name="CustomerID" />
+          <Column Name="EmployeeID" />
+          <Column Name="RequiredDate" />
+          <Column Name="ShippedDate" />
+          <Column Name="ShipVia" />
+          <Column Name="ShipName" />
+          <Column Name="ShipAddress" />
+          <Column Name="ShipCity" />
+          <Column Name="ShipRegion" />
+          <Column Name="ShipPostalCode" />
+          <Column Name="ShipCountry" />
+        </Table>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Orders">
+            <Field Name="OrderID" Type="Int32" />
+            <Field Name="OrderDate" Type="DateTime" />
+            <Field Name="Freight" Type="Decimal" />
+            <Field Name="CustomerID" Type="String" />
+            <Field Name="EmployeeID" Type="Int32" />
+            <Field Name="RequiredDate" Type="DateTime" />
+            <Field Name="ShippedDate" Type="DateTime" />
+            <Field Name="ShipVia" Type="Int32" />
+            <Field Name="ShipName" Type="String" />
+            <Field Name="ShipAddress" Type="String" />
+            <Field Name="ShipCity" Type="String" />
+            <Field Name="ShipRegion" Type="String" />
+            <Field Name="ShipPostalCode" Type="String" />
+            <Field Name="ShipCountry" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Orders">
+      <DataItems>
+        <Dimension DataMember="OrderDate" Name="Order Date" DateTimeGroupInterval="QuarterYear" UniqueName="DataItem0" />
+        <Dimension DataMember="OrderID" UniqueName="DataItem2" />
+        <Measure DataMember="Freight" UniqueName="DataItem1" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem2" />
+      </HiddenDimensions>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Orders">
+      <DataItems>
+        <Dimension DataMember="OrderDate" ColoringMode="Hue" UniqueName="DataItem1" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="Quarter" UniqueName="DataItem2" />
+        <Measure DataMember="Freight" UniqueName="DataItem3" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Extended Price" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend InsidePosition="TopLeftHorizontal" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="0.5" />
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="0.5" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
