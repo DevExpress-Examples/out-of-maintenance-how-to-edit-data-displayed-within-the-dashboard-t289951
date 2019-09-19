@@ -48,13 +48,13 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(877, 143);
+            this.ribbonControl1.Size = new System.Drawing.Size(630, 143);
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Edit Underlying Data";
             this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageUri.Uri = "Edit";
+            this.barButtonItem1.ImageOptions.ImageUri.Uri = "Edit";
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
@@ -62,8 +62,8 @@
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "Reload Data";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 2;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
@@ -87,9 +87,7 @@
             this.dashboardViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboardViewer1.Location = new System.Drawing.Point(0, 143);
             this.dashboardViewer1.Name = "dashboardViewer1";
-            this.dashboardViewer1.PrintingOptions.FontInfo.GdiCharSet = ((byte)(0));
-            this.dashboardViewer1.PrintingOptions.FontInfo.Name = null;
-            this.dashboardViewer1.Size = new System.Drawing.Size(877, 379);
+            this.dashboardViewer1.Size = new System.Drawing.Size(630, 332);
             this.dashboardViewer1.TabIndex = 1;
             this.dashboardViewer1.DashboardItemClick += new DevExpress.DashboardWin.DashboardItemMouseActionEventHandler(this.dashboardViewer1_DashboardItemClick);
             // 
@@ -98,7 +96,7 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 522);
+            this.ClientSize = new System.Drawing.Size(630, 475);
             this.Controls.Add(this.dashboardViewer1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "DashboardViewerForm";
