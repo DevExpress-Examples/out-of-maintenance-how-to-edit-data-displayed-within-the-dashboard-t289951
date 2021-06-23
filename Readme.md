@@ -4,7 +4,7 @@
 * [DashboardViewerForm.cs](./CS/Dashboard_EditData/DashboardViewerForm.cs) (VB: [DashboardViewerForm.vb](./VB/Dashboard_EditData/DashboardViewerForm.vb))
 * [UnderlyingDataForm.cs](./CS/Dashboard_EditData/UnderlyingDataForm.cs) (VB: [UnderlyingDataForm.vb](./VB/Dashboard_EditData/UnderlyingDataForm.vb))
 <!-- default file list end -->
-# How to Edit Data Displayed in the Dashboard
+# Dashboard for WinForms - How to Edit Data Displayed in the Dashboard
 
 
 This example demonstrates how to edit the data visualized in the dashboard.
