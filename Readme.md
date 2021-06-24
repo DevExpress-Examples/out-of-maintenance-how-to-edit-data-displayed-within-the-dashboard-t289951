@@ -16,3 +16,7 @@ The dashboard gets data from the Northwind database. The [Data Grid](https://doc
  To update data displayed in the dashboard, call the [DashboardViewer.ReloadData](https://docs.devexpress.com/Dashboard/devexpress.dashboardwin.dashboardviewer.reloaddata.overloads) method.
 
 ![screenshot](/images/screenshot.png)
+
+## Documentation
+
+- [Obtaining Underlying and Displayed Data](https://docs.devexpress.com/Dashboard/17269/winforms-dashboard/winforms-viewer/obtaining-underlying-and-displayed-data)
