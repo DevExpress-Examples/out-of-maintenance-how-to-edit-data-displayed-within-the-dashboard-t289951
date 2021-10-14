@@ -3,14 +3,8 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T289951)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [DashboardViewerForm.cs](./CS/Dashboard_EditData/DashboardViewerForm.cs) (VB: [DashboardViewerForm.vb](./VB/Dashboard_EditData/DashboardViewerForm.vb))
-* [UnderlyingDataForm.cs](./CS/Dashboard_EditData/UnderlyingDataForm.cs) (VB: [UnderlyingDataForm.vb](./VB/Dashboard_EditData/UnderlyingDataForm.vb))
-<!-- default file list end -->
 # Dashboard for WinForms - How to Edit Data Displayed in the Dashboard
-
 
 This example demonstrates how to edit the data visualized in the dashboard.
 
@@ -21,6 +15,13 @@ The dashboard gets data from the Northwind database. The [Data Grid](https://doc
  To update data displayed in the dashboard, call the [DashboardViewer.ReloadData](https://docs.devexpress.com/Dashboard/devexpress.dashboardwin.dashboardviewer.reloaddata.overloads) method.
 
 ![screenshot](/images/screenshot.png)
+
+<!-- default file list -->
+## Files to look at
+
+* [DashboardViewerForm.cs](./CS/Dashboard_EditData/DashboardViewerForm.cs) (VB: [DashboardViewerForm.vb](./VB/Dashboard_EditData/DashboardViewerForm.vb))
+* [UnderlyingDataForm.cs](./CS/Dashboard_EditData/UnderlyingDataForm.cs) (VB: [UnderlyingDataForm.vb](./VB/Dashboard_EditData/UnderlyingDataForm.vb))
+<!-- default file list end -->
 
 ## Documentation
 
